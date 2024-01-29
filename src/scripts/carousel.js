@@ -13,4 +13,32 @@ for (let i = 0; i < perView; i++) {
   imageWrapper.insertAdjacentHTML('beforeend', imageItems[i].outerHTML);
 }
 
-const totalScroll = 0;
+let totalScroll = 0;
+
+// Set up an interval for automatic scrolling
+let autoScroll = setInterval(scrolling, delay);
+
+// Function to handle scrolling
+function scrolling() {
+  totalScroll++;
+
+  if (totalScroll === imageItems.length + 1) {
+    resetScroll();
+  }
+
+
+  // Function to reset the scroll position and restart the interval
+  function resetScroll() {
+    clearInterval(autoScroll);
+    totalScroll = 1;
+    imageWrapper.style.transition = '0s';
+    imageWrapper.style.left = '0';
+    autoScroll = setInterval(scrolling, delay);
+  }
+
+// Get the width of the first child element to calculate the scroll distance
+  const widthEl = document.querySelector('.imageWrapper > :first-child').offsetWidth + 24;
+  imageWrapper.style.left = `-${totalScroll * widthEl}px`;
+  imageWrapper.style.transition = '.3s';
+}
+  
