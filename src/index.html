@@ -12,14 +12,14 @@
     <header>
       <h1>Ricardo Carvalho</h1>
       <ul class="navbarItems">
-        <li id="about">About</li>
-        <li id="Skills">Skills</li>
-        <li id="Projects">Projects</li>
-        <li id="Contact">Contact</li>
+        <li id="About"><a href="#about">About</a></li>
+        <li id="Skills"><a href="#skills">Skills</a></li>
+        <li id="Projects"><a href="#projects">Projects</a></li>
+        <li id="Contact"><a href="#contact">Contact</a></li>
       </ul>
       <button class="downloadResume">Resume</button>
     </header>
-    <main>
+    <main id="about">
         <div class="rectangle">
             <div class="consoleBody">
                 <div class="consoleTop">
@@ -62,7 +62,7 @@
     </main>
     <section>
         <div class="division"></div>
-        <div class="skillsTools">
+        <div class="skillsTools" id="skills">
             <h2 class="sectionTitle">Skills & Tools</h2>
             <p class="sectionDescription">Here are some of my skills</p>
             <div class="sliderContainer">
@@ -104,9 +104,77 @@
             </div>
         </div>
         <div class="division"></div>
-        <div class="projects">
+        <div class="projects" id="projects">
           <h2 class="sectionTitle">Projects</h2>
-          <p class="sectionDescription">Here are some of my projects</p>
+          <p class="sectionDescription">Here are some of my project</p>
+          <div class="projectsContainer">
+            <div class="projectsWrapper">
+              <img src="./assets/projects/weather.png" alt="weather">
+              <div class="projectsData">
+                <h2>Weather app</h2>
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, quis illum! Repudiandae recusandae omnis ad aspernatur provident. Commodi inventore ipsum nam, eum ut voluptatum! Earum magni quisquam rerum natus ratione.</span>
+                <div class="projectsLinks">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <i class="fa-brands fa-github fa-xl"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa-solid fa-code fa-xl"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="projectsWrapper">
+              <img src="./assets/projects/todo.png" alt="todo">
+              <div class="projectsData">
+                <h2>Todo app</h2>
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, quis illum! Repudiandae recusandae omnis ad aspernatur provident. Commodi inventore ipsum nam, eum ut voluptatum! Earum magni quisquam rerum natus ratione.</span>
+                <div class="projectsLinks">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <i class="fa-brands fa-github fa-xl"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa-solid fa-code fa-xl"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="projectsWrapper">
+              <img src="./assets/projects/tictactoe.png" alt="tictactoe">
+              <div class="projectsData">
+                <h2>Tic Tac Toe app</h2>
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, quis illum! Repudiandae recusandae omnis ad aspernatur provident. Commodi inventore ipsum nam, eum ut voluptatum! Earum magni quisquam rerum natus ratione.</span>
+                <div class="projectsLinks">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <i class="fa-brands fa-github fa-xl"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa-solid fa-code fa-xl"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="division"></div>
+        <div class="contact" id="contanct">
+
         </div>
     </section>
   </body>

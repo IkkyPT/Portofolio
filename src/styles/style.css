@@ -66,6 +66,11 @@ header {
   transform: scale(1.1);
 }
 
+a:visited, a:link, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
 .downloadResume {
   border-radius: 2rem;
   border: 4px solid var(--button-border-color);
@@ -215,7 +220,6 @@ section {
   margin-top: 2rem;
 }
 
-/* IMAGE */
 .imageContainer {
   overflow: hidden;
   width: 768px;
@@ -263,4 +267,69 @@ section {
 .imageContent > img:hover {
   transform: scale(1.1);
 }
-/* IMAGE */
+
+/*------- Projects Section -------*/
+
+.projectsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.projectsWrapper {
+  max-width: 400px;
+  background-color: var(--wrap-bg-color);
+  border-radius: 8px;
+  border: 3px solid var(--wrap-border-color);
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.projectsWrapper img {
+  width: 100%;
+  height: 320px;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.projectsData {
+  padding: 1rem;
+}
+
+.projectsData h2 {
+  margin-bottom: 0.6rem;
+  color: var(--main-font-color)
+}
+
+.projectsData span {
+  color: var(--sub-font-color);
+  font-size: 0.9rem;
+}
+
+.projectsLinks {
+  margin-top: 1rem;
+}
+
+.projectsLinks ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.projectsLinks li i {
+  margin-right: 1rem;
+  color: var(--main-font-color);
+}
+
+.projectsLinks a img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+}
+
+/*------- Contact Section -------*/
