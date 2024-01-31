@@ -38,10 +38,15 @@ module.exports = {
           {
             loader: 'file-loader', // or 'url-loader'
             options: {
-              outputPath: 'videos', // Specify the output directory for videos
+              outputPath: 'videos',
             },
           },
         ],
+      },
+      // Add a rule for Swiper styles
+      {
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },

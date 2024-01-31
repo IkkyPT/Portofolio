@@ -12,15 +12,22 @@
   <body class="nightMode">
     <header>
       <div class="themeToggle">
-        <div id="moon" class="moon"></div>
+          <div id="moon" class="moon"></div>
       </div>
-      <ul class="navbarItems">
-        <li id="About"><a href="#about">About</a></li>
-        <li id="Skills"><a href="#skills">Skills</a></li>
-        <li id="Projects"><a href="#projects">Projects</a></li>
-        <li id="Contact"><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="downloadResume">Resume</button>
+      <div class="navbar">
+          <div class="navbar-toggle" id="navbar-toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+          </div>
+          <ul class="navbarItems">
+              <li id="About"><a href="#about">About</a></li>
+              <li id="Skills"><a href="#skills">Skills</a></li>
+              <li id="Projects"><a href="#projects">Projects</a></li>
+              <li id="Contact"><a href="#contact">Contact</a></li>
+              <li id="Download"><button class="downloadResume">Resume</button></li>
+          </ul>
+      </div>
     </header>
     <main id="about">
         <div class="rectangle">
@@ -72,27 +79,27 @@
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="./assets/css.svg" alt="css" width="250px" height="250px">
+                  <img src="./assets/css.svg" alt="css" width="250px" height="250px" loading="lazy">
                   <p class="swiper-slide-description">Css</p>
                 </div>
                 <div class="swiper-slide">
-                  <img src="./assets/html.svg" alt="html" width="250px" height="250px">
+                  <img src="./assets/html.svg" alt="html" width="250px" height="250px" loading="lazy">
                   <p class="swiper-slide-description">Html</p>
                 </div>
                 <div class="swiper-slide">
-                  <img src="./assets/javascript.svg" alt="javascript" width="250px" height="250px">
+                  <img src="./assets/javascript.svg" alt="javascript" width="250px" height="250px" loading="lazy">
                   <p class="swiper-slide-description">JavaScript</p>
                 </div>
                 <div class="swiper-slide">
-                  <img src="./assets/git.svg" alt="git" width="250px" height="250px">
+                  <img src="./assets/git.svg" alt="git" width="250px" height="250px" loading="lazy">
                   <p class="swiper-slide-description">Git</p>
                 </div>
                 <div class="swiper-slide">
-                  <img src="./assets/npm.svg" alt="npm" width="250px" height="250px">
+                  <img src="./assets/npm.svg" alt="npm" width="250px" height="250px" loading="lazy">
                   <p class="swiper-slide-description">Npm</p>
                 </div>
                 <div class="swiper-slide">
-                  <img src="./assets/linux.svg" alt="linux" width="250px" height="250px">
+                  <img src="./assets/linux.svg" alt="linux" width="250px" height="250px" loading="lazy">
                   <p class="swiper-slide-description">Linux</p>
                 </div>
               </div>
@@ -107,19 +114,19 @@
           <p class="sectionDescription">Here are some of my project</p>
           <div class="projectsContainer">
             <div class="projectsWrapper">
-              <img src="./assets/projects/weather.png" alt="weather">
+              <img src="./assets/projects/weather.png" alt="weather" loading="lazy">
               <div class="projectsData">
                 <h2>Weather app</h2>
                 <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, quis illum! Repudiandae recusandae omnis ad aspernatur provident. Commodi inventore ipsum nam, eum ut voluptatum! Earum magni quisquam rerum natus ratione.</span>
                 <div class="projectsLinks">
                   <ul>
                     <li>
-                      <a href="https://ikkypt.github.io/Weather-App/" target="_blank">
+                      <a href="https://ikkypt.github.io/Weather-App/" target="_blank" loading="lazy">
                         <i class="fa-brands fa-github fa-xl"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="https://github.com/IkkyPT/Weather-App" target="_blank">
+                      <a href="https://github.com/IkkyPT/Weather-App" target="_blank" loading="lazy">
                         <i class="fa-solid fa-code fa-xl"></i>
                       </a>
                     </li>
@@ -128,7 +135,7 @@
               </div>
             </div>
             <div class="projectsWrapper">
-              <img src="./assets/projects/todo.png" alt="todo">
+              <img src="./assets/projects/todo.png" alt="todo" loading="lazy">
               <div class="projectsData">
                 <h2>Todo app</h2>
                 <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, quis illum! Repudiandae recusandae omnis ad aspernatur provident. Commodi inventore ipsum nam, eum ut voluptatum! Earum magni quisquam rerum natus ratione.</span>
@@ -149,9 +156,30 @@
               </div>
             </div>
             <div class="projectsWrapper">
-              <img src="./assets/projects/tictactoe.png" alt="tictactoe">
+              <img src="./assets/projects/tictactoe.png" alt="tictactoe" loading="lazy">
               <div class="projectsData">
                 <h2>Tic Tac Toe app</h2>
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, quis illum! Repudiandae recusandae omnis ad aspernatur provident. Commodi inventore ipsum nam, eum ut voluptatum! Earum magni quisquam rerum natus ratione.</span>
+                <div class="projectsLinks">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <i class="fa-brands fa-github fa-xl"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa-solid fa-code fa-xl"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="projectsWrapper">
+              <img src="./assets/projects/portofolio.png" alt="tictactoe" loading="lazy">
+              <div class="projectsData">
+                <h2>Portofolio</h2>
                 <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, quis illum! Repudiandae recusandae omnis ad aspernatur provident. Commodi inventore ipsum nam, eum ut voluptatum! Earum magni quisquam rerum natus ratione.</span>
                 <div class="projectsLinks">
                   <ul>
@@ -174,7 +202,7 @@
         <div class="contact" id="contact">
           <h2 class="sectionTitle">Contact</h2>
           <p class="sectionDescription">Don't be shy!</p>
-          
+
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
