@@ -1,23 +1,33 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Ricardo Carvalho - Web Developer</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://kit.fontawesome.com/99f34af06c.js" crossorigin="anonymous" async></script>
+    <script src="https://kit.fontawesome.com/99f34af06c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script defer src="bundle.js"></script></head>
-  <body>
+  <body class="nightMode">
     <header>
-      <h1>Ricardo Carvalho</h1>
-      <ul class="navbarItems">
-        <li id="About"><a href="#about">About</a></li>
-        <li id="Skills"><a href="#skills">Skills</a></li>
-        <li id="Projects"><a href="#projects">Projects</a></li>
-        <li id="Contact"><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="downloadResume">Resume</button>
+      <div class="themeToggle">
+          <div id="moon" class="moon"></div>
+      </div>
+      <div class="navbar">
+          <div class="navbar-toggle" id="navbar-toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+          </div>
+          <ul class="navbarItems">
+              <li id="About"><a href="#about">About</a></li>
+              <li id="Skills"><a href="#skills">Skills</a></li>
+              <li id="Projects"><a href="#projects">Projects</a></li>
+              <li id="Contact"><a href="#contact">Contact</a></li>
+              <li id="Download"><button class="downloadResume">Resume</button></li>
+          </ul>
+      </div>
     </header>
     <main id="about">
         <div class="rectangle">
@@ -31,9 +41,9 @@
                     <span class="purpleText">let </span><span class="blueText">me </span><span class="purpleText">= </span><span>{</span>
                         <ul class="consoleItems">
                             <li id="name">name: <span class="orangeText">"Ricardo Carvalho",</span></li>
-                            <li id="code">code: <span>[</span><span class="orangeText">"Javascript", "C", "Html", "Css"</span><span>],</span></li>
-                            <li id="code">code: <span>[</span><span class="orangeText">"Git", "Npm", "Linux", "Vscode", "Jest"</span><span>],</span></li>
-                            <li id="code">code: <span>[</span><span class="orangeText">"Problem-solving", "Self-Learner", "Proactive"</span><span>],</span></li>
+                            <li id="language">language: <span>[</span><span class="orangeText">"Javascript", "C", "Html", "Css"</span><span>],</span></li>
+                            <li id="tools">tools: <span>[</span><span class="orangeText">"Git", "Npm", "Linux", "Vscode", "Jest"</span><span>],</span></li>
+                            <li id="description">description: <span>[</span><span class="orangeText">"Problem-solving", "Self-Learner", "Proactive"</span><span>],</span></li>
                         </ul>
                     </span>}</span>                    
                 </div>            
@@ -49,12 +59,12 @@
             <ul class="socialItems">
                 <li>
                     <a href="https://github.com/IkkyPT" target="_blank">
-                        <img src="./assets/github-white.svg" alt="Github" width="50px" height="50px">
+                      <i class="fa-brands fa-github fa-2xl"></i>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/ricardo-carvalho-b7169a146/" target="_blank">
-                        <img src="./assets/linkedin-white.svg" alt="Linkedin" width="35px" height="35px">
+                      <i class="fa-brands fa-linkedin fa-2xl"></i>
                     </a>
                 </li>
             </ul>
@@ -65,42 +75,37 @@
         <div class="skillsTools" id="skills">
             <h2 class="sectionTitle">Skills & Tools</h2>
             <p class="sectionDescription">Here are some of my skills</p>
-            <div class="sliderContainer">
-                <div class="imageContainer">
-                    <div class="imageWrapper">
-
-                      <div class="imageContent">
-                        <img src="./assets/css.svg" alt="css">
-                        <span class="description">Css</span>
-                      </div>
-
-                      <div class="imageContent">
-                        <img src="./assets/html.svg" alt="html">
-                        <span class="description">Html</span>
-                      </div>
-
-                      <div class="imageContent">
-                        <img src="./assets/javascript.svg" alt="javascript">
-                        <span class="description">Javascript</span>
-                      </div>
-
-                      <div class="imageContent">
-                        <img src="./assets/git.svg" alt="git">
-                        <span class="description">Git</span>
-                      </div>
-
-                      <div class="imageContent">
-                        <img src="./assets/npm.svg" alt="npm">
-                        <span class="description">Npm</span>
-                      </div>
-                      
-                      <div class="imageContent">
-                        <img src="./assets/linux.svg" alt="linux">
-                        <span class="description">Linux</span>
-                      </div>
-
-                    </div>
-                  </div>
+            <div class="swiper-container">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./assets/css.svg" alt="css" width="250px" height="250px" loading="lazy">
+                  <p class="swiper-slide-description">Css</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/html.svg" alt="html" width="250px" height="250px" loading="lazy">
+                  <p class="swiper-slide-description">Html</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/javascript.svg" alt="javascript" width="250px" height="250px" loading="lazy">
+                  <p class="swiper-slide-description">JavaScript</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/git.svg" alt="git" width="250px" height="250px" loading="lazy">
+                  <p class="swiper-slide-description">Git</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/npm.svg" alt="npm" width="250px" height="250px" loading="lazy">
+                  <p class="swiper-slide-description">Npm</p>
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/linux.svg" alt="linux" width="250px" height="250px" loading="lazy">
+                  <p class="swiper-slide-description">Linux</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
             </div>
         </div>
         <div class="division"></div>
@@ -109,19 +114,19 @@
           <p class="sectionDescription">Here are some of my project</p>
           <div class="projectsContainer">
             <div class="projectsWrapper">
-              <img src="./assets/projects/weather.png" alt="weather">
+              <img src="./assets/projects/weather.png" alt="weather" loading="lazy">
               <div class="projectsData">
                 <h2>Weather app</h2>
                 <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, quis illum! Repudiandae recusandae omnis ad aspernatur provident. Commodi inventore ipsum nam, eum ut voluptatum! Earum magni quisquam rerum natus ratione.</span>
                 <div class="projectsLinks">
                   <ul>
                     <li>
-                      <a href="https://ikkypt.github.io/Weather-App/" target="_blank">
+                      <a href="https://ikkypt.github.io/Weather-App/" target="_blank" loading="lazy">
                         <i class="fa-brands fa-github fa-xl"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="https://github.com/IkkyPT/Weather-App" target="_blank">
+                      <a href="https://github.com/IkkyPT/Weather-App" target="_blank" loading="lazy">
                         <i class="fa-solid fa-code fa-xl"></i>
                       </a>
                     </li>
@@ -130,7 +135,7 @@
               </div>
             </div>
             <div class="projectsWrapper">
-              <img src="./assets/projects/todo.png" alt="todo">
+              <img src="./assets/projects/todo.png" alt="todo" loading="lazy">
               <div class="projectsData">
                 <h2>Todo app</h2>
                 <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, quis illum! Repudiandae recusandae omnis ad aspernatur provident. Commodi inventore ipsum nam, eum ut voluptatum! Earum magni quisquam rerum natus ratione.</span>
@@ -151,9 +156,30 @@
               </div>
             </div>
             <div class="projectsWrapper">
-              <img src="./assets/projects/tictactoe.png" alt="tictactoe">
+              <img src="./assets/projects/tictactoe.png" alt="tictactoe" loading="lazy">
               <div class="projectsData">
                 <h2>Tic Tac Toe app</h2>
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, quis illum! Repudiandae recusandae omnis ad aspernatur provident. Commodi inventore ipsum nam, eum ut voluptatum! Earum magni quisquam rerum natus ratione.</span>
+                <div class="projectsLinks">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <i class="fa-brands fa-github fa-xl"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa-solid fa-code fa-xl"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="projectsWrapper">
+              <img src="./assets/projects/portofolio.png" alt="tictactoe" loading="lazy">
+              <div class="projectsData">
+                <h2>Portofolio</h2>
                 <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, quis illum! Repudiandae recusandae omnis ad aspernatur provident. Commodi inventore ipsum nam, eum ut voluptatum! Earum magni quisquam rerum natus ratione.</span>
                 <div class="projectsLinks">
                   <ul>
@@ -176,21 +202,9 @@
         <div class="contact" id="contact">
           <h2 class="sectionTitle">Contact</h2>
           <p class="sectionDescription">Don't be shy!</p>
-          <div class="contactContainer">
-            <form id="contactForm">
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required>
-        
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required>
-        
-              <label for="message">Message:</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
-        
-              <button type="submit">Send Message</button>
-            </form>
-          </div>
+
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
