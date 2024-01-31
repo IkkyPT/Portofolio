@@ -13,7 +13,8 @@
   /*------- Color Variable -------*/
   --button-border-color: #115e59;
   --button-bg-color: #14b8a6;
-  --main-bg-color: #111111;
+  --night-main-bg-color: #111111;
+  --day-main-bg-color: #fff;
   --main-console-color: #011627;
   --rectangle-color: #3f3f69;
   --wrap-bg-color: #2f2f2f;
@@ -21,15 +22,16 @@
   /*------- Font Color Variable -------*/
   --main-font-color: #f5f5ed;
   --sub-font-color: #878888;
+  --day-font-color: #011627;
+  --day-sub-font-color: #07263dea;
   /*------- Font Variable -------*/
   --main-font: 'Roboto Mono', monospace;
 }
 
+/*------- Night Theme -------*/
+
 html,
 body {
-  background-color: var(--main-bg-color);
-  font-family: var(--main-font);
-  color: var(--main-font-color);
   scroll-behavior: smooth;
 }
 
@@ -37,34 +39,59 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 11rem;
+  background-color: var(--night-main-bg-color);
+  font-family: var(--main-font);
+  color: var(--main-font-color);
+  transition: 1.2s;
 }
 
 /*------- Header -------*/
 header {
   display: flex;
-  flex-direction: column; /* Change to column for smaller screens */
-  align-items: center; /* Center items vertically */
+  flex-direction: column;
+  align-items: center;
   padding: 2rem;
-  background-color: var(--main-bg-color);
+  background-color: var(--night-main-bg-color);
   color: var(--main-font-color);
   font-size: 1.2rem;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 999;
   border-bottom: 2px solid var(--wrap-bg-color);
 }
 
-header > h1 {
-  font-size: clamp(1rem, 0.7573rem + 0.7767vw, 2rem);
+.themeToggle:hover{
+    cursor: pointer;
+}
+
+.moon {
+  background-color: transparent;
+  box-shadow: -6px 1px 0 3px #275e8e;
+  border-left:3px solid #27476D;
+  border-radius:50%;
+  width: 50px;
+  height: 50px;
+  margin-left:8px;
+  margin-top:0px;
+  transition: 2s;
+}
+
+.sun {
+  background-color: #fdd462;
+  box-shadow: 2px 0px 0px 1px #D19C29;
+  border-radius:50%;
+  width: 50px;
+  height: 50px;
+  transition: 2s;
 }
 
 .navbarItems {
   display: flex;
-  flex-direction: column; /* Stack items vertically for smaller screens */
-  align-items: center; /* Center items horizontally */
+  flex-direction: column;
+  align-items: center;
   list-style-type: none;
   gap: 2rem;
-  margin-top: 1rem; /* Add margin for spacing between items */
+  margin-top: 1rem;
 }
 
 .navbarItems > li:hover {
@@ -75,6 +102,20 @@ header > h1 {
 a:visited, a:link, a:active {
   color: inherit;
   text-decoration: none;
+}
+
+.downloadResume {
+  background-color: var(--night-main-bg-color);
+  color: var(--main-font-color);
+  font-weight: 800;
+  font-size: 1.2rem;
+  padding: 0.8rem 2.5rem;
+  border: 2px solid var(--main-font-color);
+}
+
+.downloadResume:hover {
+  background-color: var(--day-main-bg-color);
+  color: var(--night-main-bg-color);
 }
 
 /*------- Main -------*/
@@ -166,13 +207,17 @@ main {
   color: var(--sub-font-color);
 }
 
+.containerInfo h1 {
+  font-size: 3rem;
+}
+
 .containerInfo h2 {
   color: #c5c5c4;
   font-size: 1.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .personalInfo {
-  padding-left: 0.65rem;
   padding-bottom: 1rem;
 }
 
@@ -204,59 +249,57 @@ section {
 
 /*------- Skill&Tools Section - Slider -------*/
 
-.sliderContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.swiper-container {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
   margin-top: 2rem;
 }
 
-.imageContainer {
-  overflow: hidden;
-  width: 768px;
+.swiper-container .swiper-button-prev{
+  left: -40px;
 }
 
-.imageWrapper {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) - 1))) / var(--per-view));
-  grid-gap: 1.5rem;
-  position: relative;
-  left: 0;
-  transition: .3s;
+.swiper-container .swiper-button-next{
+  right: -40px;
 }
 
-.imageWrapper > * {
-  aspect-ratio: 4 / 3;
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--main-font-color);
+  font-size: 10px!important;
 }
 
-.imageContent {
+.swiper {
+  max-width: 768px;
+  display: flex;
+}
+
+.swiper-wrapper > * {
+  aspect-ratio: 4/3;
+}
+
+.swiper-slide {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: var(--wrap-bg-color);
   border-radius: 5px;
   border: 3px solid var(--wrap-border-color);
+  width: 100%;
+  height: auto;
   padding: 2rem;
   gap: 1rem;
 }
 
-.imageContent > span {
-  font-size: 1.3rem;
-  font-weight: 700;
-}
-
-.imageContent > img {
+.swiper-slide img {
   width: 100%;
   height: 100%;
   min-width: 50px;
   min-height: 50px;
   display: block;
   border-radius: .5rem;
-}
-
-.imageContent > img:hover {
-  transform: scale(1.1);
 }
 
 /*------- Projects Section -------*/
@@ -373,6 +416,69 @@ button {
 button:hover {
   background-color: #45a049;
 }
+
+/* Day Theme */
+.dayMode {
+  background-color: var(--day-main-bg-color);
+  color: var(--day-font-color);
+}
+
+.dayMode > header {
+  background-color: var(--day-main-bg-color);
+  color: var(--day-font-color);
+}
+
+.dayMode * .navbarItems > li:hover {
+  border-bottom: 1px solid var(--day-font-color);
+}
+
+.dayMode * .containerInfo {
+  color: var(--day-font-color);
+}
+
+.dayMode * .containerInfo p {
+  color: var(--day-sub-font-color);
+}
+
+.dayMode * .containerInfo h2 {
+  color: #011b30;
+}
+
+.dayMode * .division {
+  background-color: var(--day-font-color);
+}
+
+.dayMode * .swiper-slide {
+  background-color: var(--day-main-bg-color);
+}
+
+.dayMode * .projectsWrapper {
+  background-color: var(--day-main-bg-color);
+}
+
+.dayMode * .projectsWrapper * h2 {
+  color: var(--night-main-bg-color);
+}
+
+.dayMode * .projectsWrapper * span{
+  color: var(--day-sub-font-color);
+}
+
+.dayMode * .sectionDescription {
+  color: var(--day-sub-font-color);
+}
+
+.dayMode * .downloadResume {
+  background-color: var(--day-main-bg-color);
+  color: var(--night-main-bg-color);
+  border-color: var(--night-main-bg-color);
+}
+
+.dayMode * .downloadResume:hover {
+  background-color: var(--night-main-bg-color);
+  color: var(--day-main-bg-color);
+}
+
 
 /* Media Queries for responsiveness */
 @media screen and (max-width: 1560px){
