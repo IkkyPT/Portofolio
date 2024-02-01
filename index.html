@@ -1,11 +1,12 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Ricardo Carvalho - Web Developer</title>
-    <meta name="description" content="" />
+    <meta name="description" content="Explore the portfolio of Ricardo Carvalho, a self-taught web developer passionate about creating engaging online experiences. Proficient in HTML, CSS, and JavaScript, Ricardo is ready to bring fresh perspectives to web development projects. Discover a collection of projects showcasing problem-solving skills, self-learning initiatives, and a proactive approach. Let's build something amazing together!" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="https://kit.fontawesome.com/99f34af06c.js" crossorigin="anonymous" defer async></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -98,12 +99,12 @@
                   <p class="swiper-slide-description">Git</p>
                 </div>
                 <div class="swiper-slide">
-                  <img src="./assets/npm.svg" alt="npm" width="250px" height="250px" loading="lazy">
-                  <p class="swiper-slide-description">Npm</p>
+                  <img src="./assets/nodejs.svg" alt="nodejs" width="250px" height="250px" loading="lazy">
+                  <p class="swiper-slide-description">Nodejs</p>
                 </div>
                 <div class="swiper-slide">
-                  <img src="./assets/linux.svg" alt="linux" width="250px" height="250px" loading="lazy">
-                  <p class="swiper-slide-description">Linux</p>
+                  <img src="./assets/jest.svg" alt="jest" width="250px" height="250px" loading="lazy">
+                  <p class="swiper-slide-description">Jest</p>
                 </div>
               </div>
             </div>
@@ -120,16 +121,16 @@
               <img src="./assets/projects/weather.webp" alt="weather" loading="lazy" width="250px" height="250px">
               <div class="projectsData">
                 <h2>Weather app</h2>
-                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, quis illum! Repudiandae recusandae omnis ad aspernatur provident. Commodi inventore ipsum nam, eum ut voluptatum! Earum magni quisquam rerum natus ratione.</span>
+                <span>Explore the Weather App — a blend of design and functionality. Crafted with HTML, CSS, and JavaScript, it fetches real-time weather data for quick insights. Stay informed with a touch of style!</span>
                 <div class="projectsLinks">
                   <ul>
                     <li>
-                      <a href="https://ikkypt.github.io/Weather-App/" target="_blank" loading="lazy">
+                      <a href="https://ikkypt.github.io/Weather-App/" id="weatherPage" target="_blank">
                         <i class="fa-brands fa-github fa-xl"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="https://github.com/IkkyPT/Weather-App" target="_blank" loading="lazy">
+                      <a href="https://github.com/IkkyPT/Weather-App" id="weatherSrc" target="_blank">
                         <i class="fa-solid fa-code fa-xl"></i>
                       </a>
                     </li>
@@ -141,16 +142,16 @@
               <img src="./assets/projects/todo.webp" alt="todo" loading="lazy" width="250px" height="250px">
               <div class="projectsData">
                 <h2>Todo app</h2>
-                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, quis illum! Repudiandae recusandae omnis ad aspernatur provident. Commodi inventore ipsum nam, eum ut voluptatum! Earum magni quisquam rerum natus ratione.</span>
+                <span>Discover the Todo App — where productivity meets simplicity. Built using HTML, CSS, and JavaScript, this app features a dynamic calendar for adding and managing events effortlessly. Stay organized !</span>
                 <div class="projectsLinks">
                   <ul>
                     <li>
-                      <a href="#">
+                      <a href="https://ikkypt.github.io/Todo-List/" id="todoPage" target="_blank">
                         <i class="fa-brands fa-github fa-xl"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://github.com/IkkyPT/Todo-List" id="todoSrc" target="_blank">
                         <i class="fa-solid fa-code fa-xl"></i>
                       </a>
                     </li>
@@ -162,16 +163,16 @@
               <img src="./assets/projects/tictactoe.webp" alt="tictactoe" loading="lazy" width="250px" height="250px">
               <div class="projectsData">
                 <h2>Tic Tac Toe app</h2>
-                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, quis illum! Repudiandae recusandae omnis ad aspernatur provident. Commodi inventore ipsum nam, eum ut voluptatum! Earum magni quisquam rerum natus ratione.</span>
+                <span>Experience the timeless joy of Tic Tac Toe! This web app, built with HTML, CSS, and JavaScript, adds a modern flair to the traditional game. Simple, fun, and a strategic entertainment!</span>
                 <div class="projectsLinks">
                   <ul>
                     <li>
-                      <a href="#">
+                      <a href="https://ikkypt.github.io/Tic-Tac-Toe/" id="tictactoePage" target="_blank">
                         <i class="fa-brands fa-github fa-xl"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://github.com/IkkyPT/Tic-Tac-Toe" id="tictactoeSrc" target="_blank">
                         <i class="fa-solid fa-code fa-xl"></i>
                       </a>
                     </li>
@@ -183,16 +184,16 @@
               <img src="./assets/projects/portofolio.webp" alt="tictactoe" loading="lazy" width="250px" height="250px">
               <div class="projectsData">
                 <h2>Portofolio</h2>
-                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, quis illum! Repudiandae recusandae omnis ad aspernatur provident. Commodi inventore ipsum nam, eum ut voluptatum! Earum magni quisquam rerum natus ratione.</span>
+                <span>Web developer portfolio featuring a range of projects highlighting JavaScript, CSS, and HTML skills. Explore responsive and user-friendly applications, weather apps to todo lists.</span>
                 <div class="projectsLinks">
                   <ul>
                     <li>
-                      <a href="#">
+                      <a href="https://ikkypt.github.io/Portofolio/" id="portofolioPage" target="_blank">
                         <i class="fa-brands fa-github fa-xl"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://github.com/IkkyPT/Portofolio" id="portofolioSrc" target="_blank">
                         <i class="fa-solid fa-code fa-xl"></i>
                       </a>
                     </li>
@@ -201,11 +202,25 @@
               </div>
             </div>
           </div>
+        </div>
         <div class="division"></div>
         <div class="contact" id="contact">
           <h2 class="sectionTitle">Contact</h2>
           <p class="sectionDescription">Don't be shy!</p>
-
+          <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="10" required></textarea>
+    
+            <input type="hidden" name="contact_number" />
+    
+            <button type="submit">Send Message</button>
+        </form>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
