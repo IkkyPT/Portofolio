@@ -1,5 +1,4 @@
 /*------- Import fonts -------*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap');
 
 *,
 *::after,
@@ -36,13 +35,10 @@ body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   margin: 0 11rem;
   background-color: var(--night-main-bg-color);
   font-family: var(--main-font);
   color: var(--main-font-color);
-  transition: 1.2s;
 }
 
 /*------- Header -------*/
