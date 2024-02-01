@@ -3,3 +3,4 @@ import './scripts/carousel';
 import './scripts/daynight';
 import './scripts/navbar';
 import './scripts/email';
+import './scripts/typeeffect'
