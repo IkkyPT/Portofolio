@@ -36,14 +36,13 @@ module.exports = {
         test: /\.(mp4|webm)$/,
         use: [
           {
-            loader: 'file-loader', // or 'url-loader'
+            loader: 'file-loader',
             options: {
               outputPath: 'videos',
             },
           },
         ],
       },
-      // Add a rule for Swiper styles
       {
         test: /\.s[ac]ss$/i,
         use: ['style-loader', 'css-loader', 'sass-loader'],
