@@ -11,26 +11,32 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <script src="bundle.js"></script></head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+  <script defer src="bundle.js"></script></head>
   <body class="dayMode">
     <header>
-      <div class="themeToggle">
-          <div id="sun" class="sun"></div>
-      </div>
+        <ul class="navbarItems">
+          <li id="Download">
+            <a href="./assets/resume.pdf" download="resume.pdf">
+              <button class="downloadResume">Resume</button>
+            </a>
+          </li>
+          <li id="About"><a href="#about">About</a></li>
+          <li id="Skills"><a href="#skills">Skills</a></li>
+          <li id="Projects"><a href="#projects">Projects</a></li>
+          <li id="Contact"><a href="#contact">Contact</a></li>
+          <li id="Download">
+      </ul>  
       <div class="navbar">
-          <div class="navbar-toggle" id="navbar-toggle">
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
-          </div>
-          <ul class="navbarItems">
-              <li id="About"><a href="#about">About</a></li>
-              <li id="Skills"><a href="#skills">Skills</a></li>
-              <li id="Projects"><a href="#projects">Projects</a></li>
-              <li id="Contact"><a href="#contact">Contact</a></li>
-              <li id="Download"><button class="downloadResume">Resume</button></li>
-          </ul>
+        <div class="navbar-toggle" id="navbar-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+      </div>
+      <div class="themeToggle">
+          <span>THEME</span>
+          <div id="sun" class="sun"></div>
       </div>
     </header>
     <main id="about">
@@ -142,7 +148,7 @@
               <img src="./assets/projects/todo.webp" alt="todo" loading="lazy" width="250px" height="250px">
               <div class="projectsData">
                 <h2>Todo app</h2>
-                <span>Discover the Todo App — where productivity meets simplicity. Built using HTML, CSS, and JavaScript, this app features a dynamic calendar for adding and managing events effortlessly. Stay organized !</span>
+                <span>Discover the Todo App — where productivity meets simplicity. Built using HTML, CSS, and JavaScript, this app features a dynamic calendar for adding and managing events effortlessly. Stay organized!</span>
                 <div class="projectsLinks">
                   <ul>
                     <li>
