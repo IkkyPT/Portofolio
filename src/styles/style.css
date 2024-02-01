@@ -117,7 +117,7 @@ button {
   border: 2px solid var(--main-font-color);
 }
 
-button:hover {
+button:active {
   background-color: var(--day-main-bg-color);
   color: var(--night-main-bg-color);
 }
@@ -207,6 +207,26 @@ main {
   color: var(--main-font-color);
 }
 
+.typeText {
+  width: 17ch;
+  border-right: 3px solid;
+  animation: blink 1s step-end infinite, type 2.5s steps(28) forwards;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+}
+
 .containerInfo p {
   color: var(--sub-font-color);
 }
@@ -288,7 +308,7 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(#fff2 30%, #fff4);
+  background: #1a2029;
   backdrop-filter: blur(5px);
   border-radius: 10px;
   width: 100%;
@@ -320,7 +340,7 @@ section {
 .projectsWrapper {
   max-width: 400px;
   overflow: hidden;
-  background: radial-gradient(#fff2 30%, #fff4);
+  background: #1a2029;
   backdrop-filter: blur(5px);
   border-radius: 10px;
   display: flex;
@@ -393,7 +413,7 @@ section {
   align-items: center;
   max-width: 40rem;
   margin: 2rem auto 20rem auto;
-  background: radial-gradient(#fff2 30%, #fff4);
+  background: #1a2029;
   backdrop-filter: blur(5px);
   border-radius: 10px;
   padding: 1.5rem;
@@ -447,13 +467,13 @@ input, textarea {
 }
 
 .dayMode * .swiper-slide {
-  background: radial-gradient(rgba(129, 128, 128, 0.205) 30%, rgba(199, 198, 198, 0.417));
+  background: #e6e5e5;
   backdrop-filter: blur(5px);
   box-shadow: none;
 }
 
 .dayMode * .projectsWrapper {
-  background: radial-gradient(rgba(129, 128, 128, 0.205) 30%, rgba(199, 198, 198, 0.417));
+  background: #e6e5e5;
   backdrop-filter: blur(5px);
   box-shadow: none;
 }
@@ -476,7 +496,7 @@ input, textarea {
   border-color: var(--night-main-bg-color);
 }
 
-.dayMode * button:hover {
+.dayMode * button:active {
   background-color: var(--night-main-bg-color);
   color: var(--day-main-bg-color);
 }
@@ -494,7 +514,7 @@ input, textarea {
 }
 
 .dayMode * #contactForm {
-  background: radial-gradient(rgba(129, 128, 128, 0.205) 30%, rgba(199, 198, 198, 0.417));
+  background: #e6e5e5;
   backdrop-filter: blur(5px);
   box-shadow: none;
 }
