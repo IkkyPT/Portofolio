@@ -59,7 +59,7 @@ header {
 
 .themeToggle {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   gap: 0.5rem;
 }
@@ -125,9 +125,10 @@ button {
   border: 2px solid var(--main-font-color);
 }
 
-button:active {
+button:hover {
   background-color: var(--day-main-bg-color);
   color: var(--night-main-bg-color);
+  transform: scale(1.03);
 }
 
 .downloadResume > a {
@@ -227,6 +228,7 @@ main {
 
 .containerInfo h1 {
   font-size: 3rem;
+  color: orange;
 }
 
 .containerInfo h2 {
@@ -429,6 +431,26 @@ input, textarea {
   resize: none;
 }
 
+/* Animations */
+
+i:hover {
+  transform: scale(1.1);
+  color: orange;
+}
+
+.projectsData * i:hover {
+  transform: scale(1.1);
+  color: orange;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+.themeToggle:hover {
+  transform: scale(1.1);
+}
+
 /* Day Theme */
 .dayMode {
   background-color: var(--day-main-bg-color);
@@ -450,6 +472,14 @@ input, textarea {
 
 .dayMode * .containerInfo p {
   color: var(--day-sub-font-color);
+}
+
+.dayMode .containerInfo #typeText {
+  color: var(--rectangle-color);
+}
+
+.dayMode .typed-cursor {
+  color: var(--rectangle-color);
 }
 
 .dayMode * .containerInfo h2 {
@@ -490,13 +520,22 @@ input, textarea {
   border-color: var(--night-main-bg-color);
 }
 
-.dayMode * button:active {
+.dayMode * button:hover {
   background-color: var(--night-main-bg-color);
   color: var(--day-main-bg-color);
+  transform: scale(1.03);
 }
 
-.dayMode * i:before  {
-  color: var(--night-main-bg-color)
+.dayMode *:before {
+  color: var(--night-main-bg-color);
+}
+
+.dayMode i:hover:before {
+  color: var(--rectangle-color);
+}
+
+.dayMode .projectsData i:hover:before {
+  color: var(--rectangle-color);
 }
 
 .dayMode * .bar {
